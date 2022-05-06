@@ -6,7 +6,7 @@
 /*   By: ibenmain <ibenmain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/22 16:25:28 by ibenmain          #+#    #+#             */
-/*   Updated: 2022/04/13 23:49:01 by ibenmain         ###   ########.fr       */
+/*   Updated: 2022/05/06 11:47:03 by ibenmain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,10 +99,11 @@ void	ft_put_img_bonus(t_data *data);
 void	ft_print_movement(t_data *data);
 void	ft_mlx_put_img_in_wind(t_data *data, int x);
 void	ft_enemy(t_data *data);
-int		ft_enemy_up(t_data *data);
-int		ft_enemy_down(t_data *data);
-int		ft_enemy_left(t_data *data);
-int		ft_enemy_right(t_data *data);
+int		ft_enemy_up(t_data *data, int i, int j);
+int		ft_enemy_down(t_data *data, int i, int j);
+int		ft_enemy_left(t_data *data, int i, int j);
+int		ft_enemy_right(t_data *data, int i, int j);
 void	ft_check_enemy(char	**map, int count_line, t_data *data);
 void	ft_free(t_data *data);
+void	ft_p_e(t_data *data);
 #endif

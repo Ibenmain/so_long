@@ -6,7 +6,7 @@
 /*   By: ibenmain <ibenmain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/09 01:52:19 by ibenmain          #+#    #+#             */
-/*   Updated: 2022/04/13 23:16:30 by ibenmain         ###   ########.fr       */
+/*   Updated: 2022/05/05 13:46:11 by ibenmain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,6 @@ void	loop_images(t_data *data)
 {
 	mlx_loop_hook(data->mlx, &add_img_to_window, data);
 	mlx_hook(data->mlx_win, 2, 1L, &key_hook, data);
-	// mlx_hook(data->mlx_win, 2, 1L, &ft_enemy, data);
 	mlx_hook(data->mlx_win, 17, 1L, &handl_keyrelease, data);
 	mlx_loop(data->mlx);
 }

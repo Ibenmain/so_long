@@ -6,7 +6,7 @@
 /*   By: ibenmain <ibenmain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 20:52:10 by ibenmain          #+#    #+#             */
-/*   Updated: 2022/04/13 22:30:57 by ibenmain         ###   ########.fr       */
+/*   Updated: 2022/05/06 11:48:20 by ibenmain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,18 +38,13 @@ int	add_img_to_window(t_data *data)
 		}
 		data->i++;
 		ft_print_movement(data);
+		ft_enemy(data);
 	}
 	return (0);
 }
 
-void	ft_put_image_to_window(t_data *data)
+void	ft_p_e(t_data *data)
 {
-	if (data->map[data->i][data->j] == '1')
-		mlx_put_image_to_window(data->mlx, data->mlx_win, data->wall, \
-			data->w, IMG_SIZE * data->i);
-	if (data->map[data->i][data->j] == '0')
-		mlx_put_image_to_window(data->mlx, data->mlx_win, data->ground, \
-			data->w, IMG_SIZE * data->i);
 	if (data->map[data->i][data->j] == 'P')
 	{
 		if (data->is_left)
@@ -68,6 +63,17 @@ void	ft_put_image_to_window(t_data *data)
 			mlx_put_image_to_window(data->mlx, data->mlx_win, data->dor1, \
 				data->w, IMG_SIZE * data->i);
 	}
+}
+
+void	ft_put_image_to_window(t_data *data)
+{
+	if (data->map[data->i][data->j] == '1')
+		mlx_put_image_to_window(data->mlx, data->mlx_win, data->wall, \
+			data->w, IMG_SIZE * data->i);
+	if (data->map[data->i][data->j] == '0')
+		mlx_put_image_to_window(data->mlx, data->mlx_win, data->ground, \
+			data->w, IMG_SIZE * data->i);
+	ft_p_e(data);
 	if (data->map[data->i][data->j] == 'H')
 		mlx_put_image_to_window(data->mlx, data->mlx_win, data->enemy, \
 			data->w, IMG_SIZE * data->i);

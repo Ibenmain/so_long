@@ -6,7 +6,7 @@
 /*   By: ibenmain <ibenmain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 13:07:01 by ibenmain          #+#    #+#             */
-/*   Updated: 2022/04/13 23:17:29 by ibenmain         ###   ########.fr       */
+/*   Updated: 2022/05/06 14:09:14 by ibenmain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ int	ft_mov_up(t_data *data)
 		|| (data->map[data->pos_i - 1][data->pos_j] == 'E'
 			&& data->coll != data->nb_coin))
 		return (0);
+	if (data->map[data->pos_i - 1][data->pos_j] == 'H')
+		ft_print_message_error("You are die!\n");
 	data->count_mov++;
 	if (data->map[data->pos_i - 1][data->pos_j] == '0')
 	{
@@ -44,6 +46,8 @@ int	ft_mov_left(t_data *data)
 		|| (data->map[data->pos_i][data->pos_j - 1] == 'E'
 			&& data->coll != data->nb_coin))
 		return (0);
+	if (data->map[data->pos_i][data->pos_j - 1] == 'H')
+		ft_print_message_error("You are die!\n");
 	data->count_mov++;
 	if (data->map[data->pos_i][data->pos_j - 1] == '0')
 	{
@@ -70,6 +74,8 @@ int	ft_mov_down(t_data *data)
 		|| (data->map[data->pos_i + 1][data->pos_j] == '1'
 			&& data->coll != data->nb_coin))
 		return (0);
+	if (data->map[data->pos_i + 1][data->pos_j] == 'H')
+		ft_print_message_error("You are die!\n");
 	data->count_mov++;
 	if (data->map[data->pos_i + 1][data->pos_j] == '0')
 	{
@@ -96,6 +102,8 @@ int	ft_mov_right(t_data *data)
 		|| (data->map[data->pos_i][data->pos_j + 1] == 'E'
 		&& data->coll != data->nb_coin))
 		return (0);
+	if (data->map[data->pos_i][data->pos_j + 1] == 'H')
+		ft_print_message_error("You are die!\n");
 	data->count_mov++;
 	if (data->map[data->pos_i][data->pos_j + 1] == '0')
 	{
