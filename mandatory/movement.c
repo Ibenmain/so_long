@@ -6,7 +6,7 @@
 /*   By: ibenmain <ibenmain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 13:07:01 by ibenmain          #+#    #+#             */
-/*   Updated: 2022/04/13 05:27:42 by ibenmain         ###   ########.fr       */
+/*   Updated: 2022/05/05 12:55:35 by ibenmain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ int	ft_mov_left(t_data *data)
 int	ft_mov_down(t_data *data)
 {
 	if (data->map[data->pos_i + 1][data->pos_j] == '1'
-		|| (data->map[data->pos_i + 1][data->pos_j] == '1'
+		|| (data->map[data->pos_i + 1][data->pos_j] == 'E'
 			&& data->coll != data->nb_coin))
 		return (0);
 	data->count_mov++;

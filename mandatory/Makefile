@@ -22,6 +22,7 @@ SRCS_B = ../bonus/main_bonus.c\
 		 ../bonus/mlx_bonus.c\
 		 ../bonus/mlx_loop_bonus.c\
 		 ../bonus/movement_bonus.c\
+		 ../bonus/move_enemy.c\
 		 ../bonus/mlx_put_mov.c\
 		 ../bonus/enemy_bonus.c\
 		 ../bonus/get_next_line.c\
